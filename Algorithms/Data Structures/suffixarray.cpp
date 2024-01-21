@@ -18,10 +18,8 @@ struct SuffixArray {
 
     int lcp(int a, int b){
         int l = min(rank[a], rank[b]), r = max(rank[a], rank[b]) - 1, res = INT_MAX;
-        cout << l << " " << r << endl;
         RFOR(i, LOGN, 0){
             if((1 << i) <= r - l + 1) {
-                cout << i << " " << st[i][l] << endl;
                 res = min(res, st[i][l]);
                 l += 1 << i;
             }
@@ -35,7 +33,7 @@ private:
         const int ascii_range = 256;
 
         // counting sort
-        vector<int> ct(ascii_range, 0);
+        vector<int> ct(max(n, ascii_range), 0);
         for(char c : s) ct[c]++;
         FOR(i, 1, ascii_range - 1) ct[i] += ct[i - 1];
 
