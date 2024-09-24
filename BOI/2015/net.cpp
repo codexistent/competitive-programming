@@ -46,7 +46,6 @@ void dfs(ll v, ll p){
                 cn[v2].push_back({bk.first, dp[v].second});
                 dp[v].second = bk.second;
             }else{
-                // cout << " go option 3" << endl;
                 cn[v].push_back({dp[v].second, dp[v2].second});
                 dp[v].first = 0;
             }
