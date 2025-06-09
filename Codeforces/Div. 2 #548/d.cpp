@@ -1,4 +1,5 @@
 // MATH, PIE
+// LESSON: YOU CAN DP OVER MANY THINGS NOT JUST INDICIES. YOU CAN DP OVER THINGS THERE ARE ONLY LOG OR SQRT OF SUCH AS GCD
 #include <bits/stdc++.h>
 using namespace std;
 #define ll long long
